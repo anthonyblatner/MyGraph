@@ -16,4 +16,6 @@
 
 @property (strong, nonatomic) MGViewController *viewController;
 
+@property (nonatomic, assign) CGPoint *points;
+
 @end

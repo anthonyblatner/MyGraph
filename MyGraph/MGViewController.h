@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MGGraphView.h"
 
 @interface MGViewController : UIViewController
+//@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+//@property (weak, nonatomic) IBOutlet MGGraphView *graphView;
 
 @end

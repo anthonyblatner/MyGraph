@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		398B280C1636C02A00E28106 /* graph-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 398B280B1636C02A00E28106 /* graph-background.png */; };
 		39DE3CCC1636A7DB0051F40F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DE3CCB1636A7DB0051F40F /* UIKit.framework */; };
 		39DE3CCE1636A7DB0051F40F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DE3CCD1636A7DB0051F40F /* Foundation.framework */; };
 		39DE3CD01636A7DB0051F40F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DE3CCF1636A7DB0051F40F /* CoreGraphics.framework */; };
@@ -19,9 +20,11 @@
 		39DE3CE51636A7DB0051F40F /* MGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DE3CE41636A7DB0051F40F /* MGViewController.m */; };
 		39DE3CE81636A7DB0051F40F /* MGViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39DE3CE61636A7DB0051F40F /* MGViewController_iPhone.xib */; };
 		39DE3CEB1636A7DB0051F40F /* MGViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39DE3CE91636A7DB0051F40F /* MGViewController_iPad.xib */; };
+		39DE3CF31636A9D70051F40F /* MGGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DE3CF21636A9D70051F40F /* MGGraphView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		398B280B1636C02A00E28106 /* graph-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graph-background.png"; sourceTree = "<group>"; };
 		39DE3CC71636A7DB0051F40F /* MyGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39DE3CCB1636A7DB0051F40F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		39DE3CCD1636A7DB0051F40F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,6 +42,9 @@
 		39DE3CE41636A7DB0051F40F /* MGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGViewController.m; sourceTree = "<group>"; };
 		39DE3CE71636A7DB0051F40F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MGViewController_iPhone.xib; sourceTree = "<group>"; };
 		39DE3CEA1636A7DB0051F40F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MGViewController_iPad.xib; sourceTree = "<group>"; };
+		39DE3CF11636A9D70051F40F /* MGGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGGraphView.h; sourceTree = "<group>"; };
+		39DE3CF21636A9D70051F40F /* MGGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGGraphView.m; sourceTree = "<group>"; };
+		39DE3CF41636AA050051F40F /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +91,15 @@
 		39DE3CD11636A7DB0051F40F /* MyGraph */ = {
 			isa = PBXGroup;
 			children = (
+				39DE3CE61636A7DB0051F40F /* MGViewController_iPhone.xib */,
 				39DE3CDA1636A7DB0051F40F /* MGAppDelegate.h */,
 				39DE3CDB1636A7DB0051F40F /* MGAppDelegate.m */,
 				39DE3CE31636A7DB0051F40F /* MGViewController.h */,
 				39DE3CE41636A7DB0051F40F /* MGViewController.m */,
-				39DE3CE61636A7DB0051F40F /* MGViewController_iPhone.xib */,
+				39DE3CF11636A9D70051F40F /* MGGraphView.h */,
+				39DE3CF21636A9D70051F40F /* MGGraphView.m */,
 				39DE3CE91636A7DB0051F40F /* MGViewController_iPad.xib */,
+				398B280B1636C02A00E28106 /* graph-background.png */,
 				39DE3CD21636A7DB0051F40F /* Supporting Files */,
 			);
 			path = MyGraph;
@@ -99,6 +108,7 @@
 		39DE3CD21636A7DB0051F40F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				39DE3CF41636AA050051F40F /* Common.h */,
 				39DE3CD31636A7DB0051F40F /* MyGraph-Info.plist */,
 				39DE3CD41636A7DB0051F40F /* InfoPlist.strings */,
 				39DE3CD71636A7DB0051F40F /* main.m */,
@@ -168,6 +178,7 @@
 				39DE3CE21636A7DB0051F40F /* Default-568h@2x.png in Resources */,
 				39DE3CE81636A7DB0051F40F /* MGViewController_iPhone.xib in Resources */,
 				39DE3CEB1636A7DB0051F40F /* MGViewController_iPad.xib in Resources */,
+				398B280C1636C02A00E28106 /* graph-background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +192,7 @@
 				39DE3CD81636A7DB0051F40F /* main.m in Sources */,
 				39DE3CDC1636A7DB0051F40F /* MGAppDelegate.m in Sources */,
 				39DE3CE51636A7DB0051F40F /* MGViewController.m in Sources */,
+				39DE3CF31636A9D70051F40F /* MGGraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +318,7 @@
 				39DE3CF01636A7DB0051F40F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

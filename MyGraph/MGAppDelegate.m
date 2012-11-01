@@ -23,6 +23,26 @@
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    //
+    DLog(@"start");
+    
+    CGPoint point1 = CGPointMake(1.0, 1.5);
+    CGPoint point2 = CGPointMake(2.0, 2.5);
+    CGPoint point3 = CGPointMake(3.0, 3.5);
+    CGPoint point4 = CGPointMake(4.0, 4.5);
+    CGPoint point5 = CGPointMake(5.0, 5.5);
+    
+    CGPoint points[] = {point1, point2, point3, point4, point5};
+    
+//    DLog(@"points: %@", points);
+    DLog(@"sizeof(points): %lu", sizeof(points));
+    DLog(@"sizeof(CGPoint): %lu", sizeof(CGPoint));
+    DLog(@"number of points: %lu", sizeof(points) / sizeof(CGPoint));
+    //
+    
+    self.points = points;
+    
     return YES;
 }
 
@@ -30,6 +50,10 @@
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
+    DLog(@"sizeof(self.points): %lu", sizeof(self.points));
+    DLog(@"sizeof(*self.points): %lu", sizeof(*self.points));
+    DLog(@"self.points[1].x: %f", (self.points)[1].x);
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
